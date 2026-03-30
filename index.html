@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人類の進化ポートフォリオ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #0a0a0a;
+  color: #eaeaea;
+}
+
+/* ナビ */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background: rgba(10,10,10,0.7);
+  backdrop-filter: blur(10px);
+  padding: 12px;
+  z-index: 1000;
+}
+
+nav a {
+  color: #aaa;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover { color: #00eaff; }
+
+/* ヘッダー */
+header {
+  text-align: center;
+  padding: 140px 20px 80px;
+}
+
+h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  background: linear-gradient(90deg, #00eaff, #00ff88);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin-top: 12px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* セクション */
+section {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #00eaff;
+}
+
+/* カード */
+.card {
+  background: rgba(255,255,255,0.03);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-4px); }
+
+/* 画像 */
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+
+.card img:hover { transform: scale(1.02); }
+
+/* ボタン */
+.button {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #00eaff;
+  color: black;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: #00c8d8;
+}
+
+ul, ol {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 13px;
+}
+
+/* スマホ */
+@media (max-width: 600px) {
+  nav a { font-size: 12px; margin: 0 10px; }
+  header { padding: 120px 15px 60px; }
+  section { margin: 80px auto; }
+  .card { padding: 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="#skill">スキル</a>
+  <a href="#work">作品</a>
+  <a href="#flow">流れ</a>
+  <a href="#contact">依頼</a>
+</nav>
+
+<header>
+  <h1>Web制作 / Bot開発</h1>
+  <p class="subtitle">
+    ご要望に合わせて、丁寧にヒアリングしながら最適な形で制作します。
+  </p>
+</header>
+
+<section id="skill">
+  <h2>スキル</h2>
+  <div class="card">
+    <p>・Webサイト制作（シンプルで使いやすいデザイン）</p>
+    <p>・Discord Bot開発（実用性の高い機能を実装）</p>
+  </div>
+</section>
+
+<section id="work">
+  <h2>作品</h2>
+  <div class="card">
+    <h3>Study Bot</h3>
+
+    <img src="https://cdn.discordapp.com/attachments/1488165065357131797/1488169500778954862/93f7f287e7d46f8a.png?ex=69cbcd59&is=69ca7bd9&hm=2e5746c839196b0e3ba0ad1363f543c608563bf91f7cdb69149f787c5f4f723f">
+
+    <p>勉強の継続とモチベーション維持をサポートするDiscord Botです。</p>
+
+    <ul>
+      <li>勉強時間の計測</li>
+      <li>学習データのグラフ化</li>
+      <li>ランキング機能</li>
+      <li>レベルアップ機能</li>
+    </ul>
+  </div>
+</section>
+
+<section id="flow">
+  <h2>制作の流れ</h2>
+  <div class="card">
+    <ol>
+      <li>お問い合わせ（Discordからご連絡ください）</li>
+      <li>ご要望のヒアリング</li>
+      <li>制作開始</li>
+      <li>完成・確認</li>
+      <li>納品</li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h2>対応できる内容</h2>
+  <div class="card">
+    <ul>
+      <li>シンプルなWebサイト制作（1ページ構成）</li>
+      <li>ポートフォリオサイト制作</li>
+      <li>Discord Botの基本機能開発</li>
+      <li>既存Botの機能追加・修正</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>納期について</h2>
+  <div class="card">
+    <p>内容にもよりますが、通常は3日〜7日程度での納品となります。</p>
+    <p>お急ぎの場合も可能な限り対応いたしますのでご相談ください。</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>依頼</h2>
+  <div class="card">
+    <p>現在、実績作りのため1件無料で受付中です。</p>
+    <p>2件目以降は5000円で承ります。</p>
+
+    <ul>
+      <li>Webサイト制作</li>
+      <li>Discord Bot開発</li>
+    </ul>
+
+    <p>まずはお気軽にご相談ください。</p>
+
+    <a href="https://discord.gg/b7DnSft9" class="button">お問い合わせはこちら</a>
+  </div>
+</section>
+
+<footer>
+  © 人類の進化ポートフォリオ
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if(top < window.innerHeight - 80){
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
+
+</body>
+</html>

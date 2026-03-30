@@ -120,6 +120,23 @@ h2 {
   background: #00c8d8;
 }
 
+/* フォーム */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px 0 20px;
+  background: #111;
+  color: white;
+}
+
+label {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* リスト */
 ul, ol {
   padding-left: 20px;
   line-height: 1.7;
@@ -150,6 +167,7 @@ footer {
   <a href="#work">作品</a>
   <a href="#flow">流れ</a>
   <a href="#contact">依頼</a>
+  <a href="#form">フォーム</a>
 </nav>
 
 <header>
@@ -189,7 +207,7 @@ footer {
   <h2>制作の流れ</h2>
   <div class="card">
     <ol>
-      <li>お問い合わせ（Discordからご連絡ください）</li>
+      <li>お問い合わせ（Discordまたはフォーム）</li>
       <li>ご要望のヒアリング</li>
       <li>制作開始</li>
       <li>完成・確認</li>
@@ -202,10 +220,10 @@ footer {
   <h2>対応できる内容</h2>
   <div class="card">
     <ul>
-      <li>シンプルなWebサイト制作（1ページ構成）</li>
+      <li>シンプルなWebサイト制作</li>
       <li>ポートフォリオサイト制作</li>
-      <li>Discord Botの基本機能開発</li>
-      <li>既存Botの機能追加・修正</li>
+      <li>Discord Bot開発</li>
+      <li>機能追加・修正</li>
     </ul>
   </div>
 </section>
@@ -213,8 +231,8 @@ footer {
 <section>
   <h2>納期について</h2>
   <div class="card">
-    <p>内容にもよりますが、通常は3日〜7日程度での納品となります。</p>
-    <p>お急ぎの場合も可能な限り対応いたしますのでご相談ください。</p>
+    <p>通常は3日〜7日程度での納品となります。</p>
+    <p>お急ぎの場合もご相談ください。</p>
   </div>
 </section>
 
@@ -229,9 +247,29 @@ footer {
       <li>Discord Bot開発</li>
     </ul>
 
-    <p>まずはお気軽にご相談ください。</p>
+    <a href="https://discord.gg/b7DnSft9" class="button">Discordで相談する</a>
+  </div>
+</section>
 
-    <a href="https://discord.gg/b7DnSft9" class="button">お問い合わせはこちら</a>
+<section id="form">
+  <h2>お問い合わせフォーム</h2>
+  <div class="card">
+
+    <form action="https://formspree.io/f/xreoqlav" method="POST">
+
+      <label>お名前</label>
+      <input type="text" name="name" required>
+
+      <label>メールアドレス</label>
+      <input type="email" name="email" required>
+
+      <label>ご依頼内容</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit" class="button">送信する</button>
+
+    </form>
+
   </div>
 </section>
 
